@@ -1156,10 +1156,40 @@ class Ion_auth_model extends CI_Model {
         $id = $this->db->insert_id();
         return (isset($id)) ? $id : FALSE;
     }
-    
-     public function update_blog($id, $data) {               
-        $this->db->update('blog', $data, array('blog_id' => $id));       
+
+    public function update_blog($id, $data) {
+        $this->db->update('blog', $data, array('blog_id' => $id));
         return TRUE;
+    }
+
+    public function gallery($id = '') {
+
+        $this->db->select("*");
+        $this->db->from("gallery");
+        if ($id) {
+            $this->db->where("id", $id);
+        }
+        $this->response = $this->db->get();
+        return $this;
+    }
+
+    public function add_image($name, $description, $image) {
+
+        $data = array(
+            'name' => $name,
+            'description' => $description,
+            'image' => $image,
+            'date' => date("Y-m-d")
+        );
+        $this->db->insert('gallery', $data);
+        $id = $this->db->insert_id();
+        return (isset($id)) ? $id : FALSE;
+    }
+
+    public function delete_image($id = NULL) {
+
+        $result = $this->db->delete('gallery', array('id' => $id));
+        return $result;
     }
 
     public function user($id = NULL) {

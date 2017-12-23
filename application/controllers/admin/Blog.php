@@ -29,7 +29,7 @@ class Blog extends Admin_Controller {
     }
 
     public function create() {
-        $this->breadcrumbs->unshift(2, lang('menu_blog_create'), 'admin/users/blog');
+        $this->breadcrumbs->unshift(2, lang('menu_blog_create'), 'admin/blog/create');
         $this->data['breadcrumb'] = $this->breadcrumbs->show();
 
         $this->form_validation->set_rules('title', 'lang:blog_title', 'required');

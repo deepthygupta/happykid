@@ -27,3 +27,4 @@ $lang['menu_database_utility'] = 'Database utility';
 $lang['menu_webapp'] = 'Web application';
 $lang['menu_license'] = 'License';
 $lang['menu_resources'] = 'Resources';
+$lang['menu_gallery'] = 'Gallery';
