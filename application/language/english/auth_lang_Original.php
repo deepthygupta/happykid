@@ -140,3 +140,8 @@ $lang['reset_password_new_password_confirm_label']            = 'Confirm New Pas
 $lang['reset_password_submit_btn']                            = 'Change';
 $lang['reset_password_validation_new_password_label']         = 'New Password';
 $lang['reset_password_validation_new_password_confirm_label'] = 'Confirm New Password';
+
+// Blog
+$lang['edit_blog_validation_title_label']            = 'Title';
+$lang['edit_blog_validation_author_label']            = 'Author';
+$lang['edit_blog_validation_description_label']            = 'Description';
